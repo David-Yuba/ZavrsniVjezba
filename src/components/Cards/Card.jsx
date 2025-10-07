@@ -19,7 +19,6 @@ const imageDebugStyling = {
 }
 
 export default function Card({course}){
-
     return (
         <div>
             <img style = {imageDebugStyling} src={course.image}/>
