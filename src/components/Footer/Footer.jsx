@@ -5,8 +5,8 @@ export default function Footer(){
     
     return(
         <div>
-            <p>All rights reserved</p>
-            <Navigation/>
+            <p>©2025 Online Škola. Sva prava pridržana.</p>
+            <Navigation mini = {true}/>
         </div>
     )
 }

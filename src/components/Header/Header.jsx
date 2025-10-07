@@ -5,7 +5,7 @@ export default function Header(){
 
     return(
         <div>
-            <h1>Logo</h1>
+            <h1>Online Škola</h1>
             <Navigation/>
         </div>
     )
