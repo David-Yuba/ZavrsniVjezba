@@ -1,12 +1,9 @@
-import Card from "./Card";
-
-export default function Cards({courseList}){
-
+export default function Cards({list, Card}){
 
     return (
         <div>
-            {courseList.map((course) => (
-                <Card course = {course}/>
+            {list.map((course) => (
+                <Card key={list.id} course = {course}/>
             ))}
         </div>
     )

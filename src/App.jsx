@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact.jsx"
 import Categories from "./pages/Categories/Categories.jsx"
 import Courses from "./pages/Courses/Courses.jsx"
 import Faq from "./pages/FAQ/Faq.jsx"
+import CourseDetails from "./pages/CourseDetails/CourseDetails.jsx";
 
 import "./styles/reset.css";
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="categories" element={<Categories/>}/>
           <Route path="courses" element={<Courses/>}/>
           <Route path="faq" element={<Faq/>}/>
+          <Route path="devroute" element={<CourseDetails/>}/>
         </Route>
       </Routes>
   );

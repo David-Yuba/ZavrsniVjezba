@@ -1,6 +1,6 @@
 import { courses } from "../../data/courses";
 import Cards from "../../components/Cards/Cards";
-
+import CourseCard from "../../components/Cards/CourseCard";
 
 export default function Home(){
 
@@ -14,7 +14,7 @@ export default function Home(){
             </div>
             <div>
                 <h3>Izdvojeni tečajevi</h3>
-                <Cards courseList= {courses}/>
+                <Cards list= {courses} Card={CourseCard}/>
             </div>
         </div>
     )

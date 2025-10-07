@@ -18,7 +18,8 @@ const imageDebugStyling = {
     maxWidth: "300px",
 }
 
-export default function Card({course}){
+export default function CourseCard({course}){
+    
     return (
         <div>
             <img style = {imageDebugStyling} src={course.image}/>
