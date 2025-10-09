@@ -1,7 +1,10 @@
+import { useParams, useNavigate } from "react-router-dom";
+
 import { courses } from "../../data/courses"
 
 import Tag from "../../components/Tags/Tag";
 import Tags from "../../components/Tags/Tags";
+import { useEffect } from "react";
 
 /* {
     id: 1,
@@ -18,10 +21,18 @@ import Tags from "../../components/Tags/Tags";
   } */
 
 export default function CourseDetails(){
-    const course = courses[6];
+    const id = Number(useParams().courseId.slice(1));
+    const course = courses.find((c) => c.id === id);
+
+    const nav = useNavigate();
+
+    useEffect(function(){
+        window.scrollTo(0,0);
+    }, [])
+
     return (
         <main>
-            <button>← Natrag</button>
+            <button onClick={() => nav("/courses")}>← Natrag</button>
 
             <section>
                 <h1>{course.title}</h1>

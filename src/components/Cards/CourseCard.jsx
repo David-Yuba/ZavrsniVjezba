@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import Tags from "../Tags/Tags"
 import Tag from "../Tags/Tag"
 /* {
@@ -20,6 +21,8 @@ const imageDebugStyling = {
 
 export default function CourseCard({course}){
     
+    let openDetails = useNavigate();
+
     return (
         <div className="card">
             <img /* style = {imageDebugStyling} */ src={course.image}/>
@@ -33,7 +36,7 @@ export default function CourseCard({course}){
                 <p>{course.shortDescription}</p>
                 <div className="price-and-button-cont">
                     <p>{`${course.price}€`}</p>
-                    <button>Detalji</button>
+                    <button onClick = {() => openDetails(`/course-details/:${course.id}`)}>Detalji</button>
                 </div>
             </div>
         </div>

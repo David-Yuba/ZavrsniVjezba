@@ -29,8 +29,10 @@ p:not(:last-child, footer p) {
 
 /* Container elements */
 body {
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
-
+    min-height: 100vh;
     font: var(--font);
 }
 section {
@@ -46,6 +48,9 @@ img {
 /* Header, main and footer */
 body > div {
     background-color: var(--bg);
+}
+body > div:nth-child(2){
+    flex-grow: 1;
 }
 body > div:first-child, body > div:last-child {
     background-color: var(--primary);

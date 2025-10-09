@@ -25,7 +25,7 @@ export default function App() {
           <Route path="categories" element={<Categories/>}/>
           <Route path="courses" element={<Courses/>}/>
           <Route path="faq" element={<Faq/>}/>
-          <Route path="devroute" element={<CourseDetails/>}/>
+          <Route path="/course-details/:courseId" element={<CourseDetails/>}/>
         </Route>
       </Routes>
   );

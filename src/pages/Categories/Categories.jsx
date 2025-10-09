@@ -4,7 +4,7 @@ import Cards from "../../components/Cards/Cards"
 import CategoryCard from "../../components/Cards/CategoryCard"
 
 export default function Categories(){
-    const categories = courses.map((course) => course.category).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : "", [])
+    const categories = courses.map((course) => course.category).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : [...acc], [])
 
     return (
         <main className="categories">
