@@ -7,9 +7,12 @@ import CourseCard from "../../components/Cards/CourseCard"
 import "./courses.css"
 
 export default function Courses(){
+
+    const initialCategory = new URLSearchParams(window.location.search).get("category");
+    console.log(initialCategory);
     const [search, setSearch] = useState("");
     const [filters, setFilters] = useState({
-        category: "",
+        category: initialCategory ? initialCategory : "",
         level: "",
         ordering: 2
     })
