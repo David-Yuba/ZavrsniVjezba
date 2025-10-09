@@ -7,9 +7,11 @@ export default function Categories(){
     const categories = courses.map((course) => course.category).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : "", [])
 
     return (
-        <div>
-            <h1>Kategorije</h1>
+        <main className="categories">
+            <section>
+                <h1>Kategorije</h1>
+            </section>
             <Cards list={categories} Card={CategoryCard}/>
-        </div>
+        </main>
     )
 }

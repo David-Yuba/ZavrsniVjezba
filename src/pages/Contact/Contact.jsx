@@ -3,10 +3,14 @@ import Form from "../../components/Form/Form"
 export default function Contact(){
 
     return (
-        <div>
-            <h1>Kontakt</h1>
-            <p>Imate pitanje? Pošaljite nam poruku putem forme.</p>
-            <Form></Form>
-        </div>
+        <main>
+            <section>
+                <h1>Kontakt</h1>
+                <p>Imate pitanje? Pošaljite nam poruku putem forme.</p>
+            </section>
+            <section>
+                <Form></Form>
+            </section>
+        </main>
     )
 }

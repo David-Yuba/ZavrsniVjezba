@@ -1,0 +1,42 @@
+/* Breakpoints
+X-Small 	None 	<576px
+Small 	sm 	≥576px
+Medium 	md 	≥768px
+Large 	lg 	≥992px
+Extra large 	xl 	≥1200px
+Extra extra large 	xxl 	≥1400px
+*/
+/*
+Layout css rules are written in order acording to the hierarchical placement in the dom of the element they select 
+root -> body -> header,main,footer -> page elements -> ...
+*/
+
+
+@media screen and (min-width: 768px) {
+    header, main, footer {
+        margin: 0 auto;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Page sections layout */
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 16px;
+    }
+    
+    div.drop-downs-cont {
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* Page sections layout */
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

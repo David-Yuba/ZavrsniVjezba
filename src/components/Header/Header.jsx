@@ -1,12 +1,32 @@
+import { useState, useEffect } from "react";
+
+import MobileNavigation from "../Navigation/MobileNavigation"
 import Navigation from "../Navigation/Navigation"
 
 export default function Header(){
 
+    const [isMobile, setIsMobile] = useState(true);
+
+    useEffect(function(){
+        
+        window.addEventListener("load", onResize)
+        window.addEventListener("resize", onResize)
+
+        return function(){ 
+            window.removeEventListener("load", onResize)
+            window.removeEventListener("resize",onResize)
+        }
+    },[]);
+
+    function onResize() {
+        if(document.getElementById("root").clientWidth < 992) setIsMobile(true);
+        else setIsMobile(false);
+    }
 
     return(
-        <div>
-            <h1>Online Škola</h1>
-            <Navigation/>
-        </div>
+        <header>
+            <h4>Online Škola</h4>
+            {isMobile ? <MobileNavigation/>:<Navigation/>}
+        </header>
     )
 }

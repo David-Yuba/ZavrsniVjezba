@@ -1,0 +1,40 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    background-color: white;
+    border-radius: 8px;
+
+    box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.349) ;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 8px 16px;
+}
+.card-body section {
+    margin-bottom: 8px;
+}
+
+.price-and-button-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-and-button-cont p {
+    margin-bottom: 0;
+}
+.card button {
+    max-width: 80px;
+}

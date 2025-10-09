@@ -21,17 +21,21 @@ const imageDebugStyling = {
 export default function CourseCard({course}){
     
     return (
-        <div>
-            <img style = {imageDebugStyling} src={course.image}/>
-            <h6>{course.title}</h6>
-            <Tags>
-                <Tag>{course.category}</Tag>
-                <Tag>{course.level}</Tag>
-                <Tag>{`${course.durationHours}h`}</Tag>
-            </Tags>
-            <p>{course.shortDescription}</p>
-            <p>{`${course.price}€`}</p>
-            <button>Detalji</button>
+        <div className="card">
+            <img /* style = {imageDebugStyling} */ src={course.image}/>
+            <div className="card-body">
+                <h6>{course.title}</h6>
+                <Tags>
+                    <Tag>{course.category}</Tag>
+                    <Tag>{course.level}</Tag>
+                    <Tag>{`${course.durationHours}h`}</Tag>
+                </Tags>
+                <p>{course.shortDescription}</p>
+                <div className="price-and-button-cont">
+                    <p>{`${course.price}€`}</p>
+                    <button>Detalji</button>
+                </div>
+            </div>
         </div>
     )
 }

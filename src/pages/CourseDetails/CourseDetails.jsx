@@ -20,41 +20,49 @@ import Tags from "../../components/Tags/Tags";
 export default function CourseDetails(){
     const course = courses[6];
     return (
-        <div>
+        <main>
             <button>← Natrag</button>
-            <h1>{course.title}</h1>
-            <img src={course.image}/>
+
+            <section>
+                <h1>{course.title}</h1>
+                <img src={course.image}/>
+            </section>
             <Tags>
                 <Tag>{course.category}</Tag>
                 <Tag>{course.level}</Tag>
                 <Tag>{`${course.durationHours}h`}</Tag>
             </Tags>
-            <p>Cijena: {course.price} €</p>
-            <p>{course.longDescription}</p>
-            <h3>Što dobivate</h3>
-            <ul>
-                <li>Praktične vježbe i mini projekte</li>
-                <li>Materijali i snimke predavanja</li>
-                <li>Podrška i Q&A</li>
-            </ul>
-            <h3>Termini</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Datum početka</th>
-                        <th>Cijena</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {course.startDates.map((date)=>(
-                        <tr key={date}>
-                            <td>{date}</td>
-                            <td>{course.price} €</td>
-                        </tr>))}
-                </tbody>
-            </table>
-            
-            <button>Prijavi se</button>
-        </div>
+            <section>
+                <p>Cijena: {course.price} €</p>
+                <p>{course.longDescription}</p>
+            </section>
+            <section>
+                <h3>Što dobivate</h3>
+                <ul>
+                    <li>Praktične vježbe i mini projekte</li>
+                    <li>Materijali i snimke predavanja</li>
+                    <li>Podrška i Q&A</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Termini</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Datum početka</th>
+                            <th>Cijena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {course.startDates.map((date)=>(
+                            <tr key={date}>
+                                <td>{date}</td>
+                                <td>{course.price} €</td>
+                            </tr>))}
+                    </tbody>
+                </table>
+                <button>Prijavi se</button>
+            </section>
+        </main>
     )
 }

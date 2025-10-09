@@ -1,0 +1,161 @@
+/* Font styles */
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1.1rem;
+}
+h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child, header h4), h5:not(:last-child), h6:not(:last-child) {
+    margin-bottom: 8px;
+}
+h4, h5, h6 {
+    font-weight: bold;
+}
+p:not(:last-child, footer p) {
+    margin-bottom: 8px;
+}
+
+/* Container elements */
+body {
+    overflow-x: hidden;
+
+    font: var(--font);
+}
+section {
+    width: 100%;
+}
+section:not(:last-child) {
+    margin-bottom: 16px;
+}
+img {
+    width: 100%;
+}
+
+/* Header, main and footer */
+body > div {
+    background-color: var(--bg);
+}
+body > div:first-child, body > div:last-child {
+    background-color: var(--primary);
+}
+
+body > div:first-child {
+    --header-height: 80px;
+    height: var(--header-height);
+}
+header {
+    height: var(--header-height);
+    width: 100%;
+}
+.header-div {
+    position: sticky; 
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+footer {
+    --footer-height: 80px;
+    height: var(--footer-height);
+
+}
+header, footer {
+    color: var(--bg);
+}
+
+/* Element styling */
+button {
+    padding: 8px 16px;
+
+    border-radius: 8px;
+    border: none;
+    color: var(--bg);
+    background-color: var(--primary);
+}
+
+button:not(:last-child){
+    margin-right: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 4px 8px;
+
+    font-size: 0.8rem;
+
+    border-radius: 8px;
+    background-color: #6eca7542;
+    color: var(--accent)
+}
+
+/* Mobile menu styling */
+.menuIcon {
+    --menu-Size: 32px;
+    --line-Gap: 6px;
+    width: var(--menu-Size);
+    height: var(--menu-Size);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--line-Gap);
+
+}
+.menuIcon > div  {
+    --line-Height: calc((var(--menu-Size) - var(--line-Gap) * 2) / 3);
+    flex-grow: 1;
+    position: relative;
+
+    border-radius: 4px;
+    background-color: var(--bg);
+    transition: transform 0.5s linear;
+}
+
+.menuIcon.active > div:first-child {
+    transform: translateY(calc(var(--menu-Size) / 2 - var(--line-Height) / 2)) rotate(-45deg);
+}
+.menuIcon.active > div:last-child {
+    transform: translateY(calc(var(--menu-Size) / -2 + var(--line-Height) / 2)) rotate(45deg);
+}
+.menuIcon.active > div:nth-child(2) {
+    transform: scale(0);
+}
+
+.mobileMenu {
+    --mobileMenu-width: 128px;
+    width: var(--mobileMenu-width);
+
+    position: absolute;
+    top: var(--header-height);
+    z-index: 10;
+    right:calc(var(--mobileMenu-width) * -1);
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    background-color: var(--primary);
+    padding: 16px 16px;
+    border-radius: 8px;
+    transition: right 0.5s linear;
+}
+.mobileMenu.active {
+    left: auto;
+    right: 32px;
+}

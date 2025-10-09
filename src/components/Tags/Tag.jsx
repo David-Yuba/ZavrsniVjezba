@@ -1,5 +1,5 @@
 export default function Tag({children}){
     return (
-        <span>{children}</span>
+        <span className="tag">{children}</span>
     )
 }

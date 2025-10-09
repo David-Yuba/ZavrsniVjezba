@@ -1,0 +1,10 @@
+.courses input {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.drop-downs-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}

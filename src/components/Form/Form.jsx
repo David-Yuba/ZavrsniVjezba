@@ -5,6 +5,8 @@ import SelectInput from "./FormFields/SelectInput";
 import TextareaInput from "./FormFields/TextareaInput";
 import CheckboxInput from "./FormFields/CheckboxInput";
 
+import "./formStyling.css";
+
 export default function Form(){
 
     return (
