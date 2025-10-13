@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Layout from "./layout";
+import Layout from "./layout.jsx";
 
 import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx"
@@ -11,6 +11,8 @@ import Courses from "./pages/Courses/Courses.jsx"
 import Faq from "./pages/FAQ/Faq.jsx"
 import CourseDetails from "./pages/CourseDetails/CourseDetails.jsx";
 
+import './styles/index.css'
+import "./styles/reset.css"
 import "./styles/cssVariables.css"
 import "./styles/baseStyle.css";
 

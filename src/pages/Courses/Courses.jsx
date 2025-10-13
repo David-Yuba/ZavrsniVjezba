@@ -1,15 +1,15 @@
 import { useState } from "react"
 
 import { courses } from "../../data/courses"
-import Cards from "../../components/Cards/Cards"
-import CourseCard from "../../components/Cards/CourseCard"
+import Cards from "../../components/Cards/Cards.jsx"
+import CourseCard from "../../components/Cards/CourseCard.jsx"
 
 import "./courses.css"
 
 export default function Courses(){
 
     const initialCategory = new URLSearchParams(window.location.search).get("category");
-    console.log(initialCategory);
+
     const [search, setSearch] = useState("");
     const [filters, setFilters] = useState({
         category: initialCategory ? initialCategory : "",

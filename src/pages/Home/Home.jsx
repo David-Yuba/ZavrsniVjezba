@@ -1,6 +1,6 @@
 import { courses } from "../../data/courses";
-import Cards from "../../components/Cards/Cards";
-import CourseCard from "../../components/Cards/CourseCard";
+import Cards from "../../components/Cards/Cards.jsx";
+import CourseCard from "../../components/Cards/CourseCard.jsx";
 
 import "./home.css"
 

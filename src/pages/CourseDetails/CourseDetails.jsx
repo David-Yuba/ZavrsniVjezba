@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 
-import { courses } from "../../data/courses"
+import { courses } from "../../data/courses.js"
 
-import Tag from "../../components/Tags/Tag";
-import Tags from "../../components/Tags/Tags";
+import Tag from "../../components/Tags/Tag.jsx";
+import Tags from "../../components/Tags/Tags.jsx";
 import { useEffect } from "react";
 
 /* {

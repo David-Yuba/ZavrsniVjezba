@@ -1,21 +1,13 @@
-//import { formData } from "./formData";
 
-import TextInput from "./FormFields/textInput";
-import SelectInput from "./FormFields/SelectInput";
-import TextareaInput from "./FormFields/TextareaInput";
-import CheckboxInput from "./FormFields/CheckboxInput";
+import TextInput from "./FormFields/textInput.jsx";
+import SelectInput from "./FormFields/SelectInput.jsx";
+import TextareaInput from "./FormFields/TextareaInput.jsx";
+import CheckboxInput from "./FormFields/CheckboxInput.jsx";
 
-import  useFormData from "./formData";
+import  useFormData from "./formData.js";
 
 import "./formStyling.css";
-/* form data
-    name: "",
-    email: "",
-    phone: "",
-    about: "",
-    message: "",
-    gdpr: false
-*/
+
 export default function Form(){
     
     const {fData: [data, setData], errors: [error, setErrors]} = useFormData();

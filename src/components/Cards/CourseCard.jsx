@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
-import Tags from "../Tags/Tags"
-import Tag from "../Tags/Tag"
+import Tags from "../Tags/Tags.jsx"
+import Tag from "../Tags/Tag.jsx"
 /* {
     id: 1,
     title: "React 101",

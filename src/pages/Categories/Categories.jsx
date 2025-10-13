@@ -1,7 +1,7 @@
-import { courses } from "../../data/courses"
+import { courses } from "../../data/courses.js"
 
-import Cards from "../../components/Cards/Cards"
-import CategoryCard from "../../components/Cards/CategoryCard"
+import Cards from "../../components/Cards/Cards.jsx"
+import CategoryCard from "../../components/Cards/CategoryCard.jsx"
 
 export default function Categories(){
     const categories = courses.map((course) => course.category).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : [...acc], [])

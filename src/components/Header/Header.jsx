@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import MobileNavigation from "../Navigation/MobileNavigation"
-import Navigation from "../Navigation/Navigation"
+import MobileNavigation from "../Navigation/MobileNavigation.jsx"
+import Navigation from "../Navigation/Navigation.jsx"
 
 export default function Header(){
 
