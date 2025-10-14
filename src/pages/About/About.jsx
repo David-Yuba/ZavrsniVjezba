@@ -1,7 +1,9 @@
+import "./about.css"
+
 export default function About(){
 
     return (
-        <main>
+        <main className="about">
             <section>
                 <h1>O nama</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate perferendis corrupti autem minima deserunt in, hic quaerat ratione eveniet pariatur asperiores cumque blanditiis quam voluptatem libero a odit vel.</p>

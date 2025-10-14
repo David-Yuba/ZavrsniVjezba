@@ -4,8 +4,8 @@ export default function Cards({list, Card}){
 
     return (
         <section className="cards">
-            {list.map((course) => (
-                <Card key={course.id} course = {course}/>
+            {list.map((course, index) => (
+                <Card key={index} course = {course}/>
             ))}
         </section>
     )

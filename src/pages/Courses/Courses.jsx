@@ -7,29 +7,41 @@ import CourseCard from "../../components/Cards/CourseCard"
 import "./courses.css"
 
 export default function Courses(){
+    const params = new URLSearchParams(window.location.search)
+    const initialSearch = params.get("search");
+    const initialCategory = params.get("category");
+    const initilLevel = params.get("level");
+    const initilOrdering = params.get("ordering");
 
-    const initialCategory = new URLSearchParams(window.location.search).get("category");
-    console.log(initialCategory);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(initialSearch ? initialSearch : "");
     const [filters, setFilters] = useState({
         category: initialCategory ? initialCategory : "",
-        level: "",
-        ordering: 2
+        level: initilLevel ? initilLevel : "",
+        ordering: initilOrdering ? initilOrdering : 2
     })
     const categories = courses.map((course) => course.category).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : [...acc], []);
     const levels = courses.map((course) => course.level).reduce((acc,c) => !acc.includes(c) ? [...acc,c] : [...acc], []);
     
     function handleInputChange(e){
+        params.set("search", e.target.value);
         setSearch(e.target.value)
+        console.log(params.get("search"))
+        history.replaceState(null,"",`${window.location.href.split("?")[0]}?search=${e.target.value}&category=${filters.category}&level=${filters.level}&ordering=${filters.ordering}`)
     }
     function handleCategoryChange(e){
-        setFilters((v) => ({...v, ["category"]:e.target.value}))
+        params.set("category", e.target.value);
+        setFilters((v) => ({...v, ["category"]:e.target.value}));        
+        history.replaceState(null,"",`${window.location.href.split("?")[0]}?search=${search}&category=${e.target.value}&level=${filters.level}&ordering=${filters.ordering}`)
     }
     function handleLevelChange(e){
+        params.set("level", e.target.value);
         setFilters((v) => ({...v, ["level"]:e.target.value}))
+        history.replaceState(null,"",`${window.location.href.split("?")[0]}?search=${search}&category=${filters.category}&level=${e.target.value}&ordering=${filters.ordering}`)
     }
     function handleOrderChange(e){
+        params.set("ordering", e.target.value);
         setFilters((v) => ({...v, ["ordering"]:Number(e.target.value)}))
+        history.replaceState(null,"",`${window.location.href.split("?")[0]}?search=${search}&category=${filters.category}&level=${filters.level}&ordering=${e.target.value}`)
     }
 
     function searchCourses(value){

@@ -9,8 +9,8 @@ export default function Accordion({ children, question}){
     const [ isActive, setIsActive] = useState(false)
 
     return (
-        <div className="accordion">
-            <div onClick={() => setIsActive(v => !v)}>
+        <div className="accordion" onClick={() => setIsActive(v => !v)}>
+            <div>
                 <p>{question}</p>
                 {isActive ? <p>-</p> : <p>+</p>}
             </div>

@@ -27,6 +27,11 @@ p:not(:last-child, footer p) {
     margin-bottom: 8px;
 }
 
+ul {
+    list-style: disc;
+    margin-left: 24px;
+}
+
 /* Container elements */
 body {
     display: flex;

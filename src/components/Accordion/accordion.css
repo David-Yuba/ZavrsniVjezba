@@ -6,7 +6,7 @@
 }
 
 .accordion p {
-    margin: 0;
+    margin: 0 !important;
 }
 
 .accordion > :first-child {
