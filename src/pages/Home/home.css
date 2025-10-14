@@ -1,3 +1,15 @@
 .action-button {
     background-color: var(--accent);
 }
+
+.links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .links {
+        justify-content: flex-start;
+    }
+}

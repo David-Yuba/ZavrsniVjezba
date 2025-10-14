@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { courses } from "../../data/courses";
 import Cards from "../../components/Cards/Cards.jsx";
 import CourseCard from "../../components/Cards/CourseCard.jsx";
@@ -12,8 +14,10 @@ export default function Home(){
             <section>
                 <h1>Izdvojeni tečajevi</h1>
                 <p>Učite moderne tehnologije kroz praktične tečajeve</p>
-                <button>Pogledaj tečajeve</button>
-                <button className="action-button">Kontaktiraj nas</button>
+                <div className="links">
+                    <Link to="/courses"><button>Pogledaj tečajeve</button></Link>
+                    <Link to="/contact"><button className="action-button">Kontaktiraj nas</button></Link>
+                </div>
             </section>
             <section>
                 <h3>Izdvojeni tečajevi</h3>

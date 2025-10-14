@@ -32,7 +32,7 @@ export default function CourseDetails(){
 
     return (
         <main>
-            <button onClick={() => nav("/courses")}>← Natrag</button>
+            <button style={{alignSelf: "flex-start"}} onClick={() => nav("/courses")}>← Natrag</button>
 
             <section>
                 <h1>{course.title}</h1>
