@@ -11,8 +11,6 @@ import Courses from "./pages/Courses/Courses.jsx"
 import Faq from "./pages/FAQ/Faq.jsx"
 import CourseDetails from "./pages/CourseDetails/CourseDetails.jsx";
 
-import './styles/index.css'
-import "./styles/reset.css"
 import "./styles/cssVariables.css"
 import "./styles/baseStyle.css";
 

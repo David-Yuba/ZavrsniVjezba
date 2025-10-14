@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx webpack server",
     "build": "vite build",
     "wbBuild": "npx webpack",
     "lint": "eslint .",
